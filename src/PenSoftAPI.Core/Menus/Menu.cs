@@ -13,9 +13,10 @@ namespace PenSoftAPI.Menus
         public virtual bool IsPerent { get; set; }
 
         public virtual string MenuDescription { get; set; }
-
         public int? ParentId { get; set; }
+        [NotMapped]
         public bool isView { get; set; }
+        [NotMapped]
         public bool isEdit { get; set; }
     }
 }
