@@ -13,8 +13,7 @@ namespace PenSoftAPI.Authorization.Users
         {
             return Guid.NewGuid().ToString("N").Truncate(16);
         }
-        public DateTime? JoiningDate { get; set; }
-        public string Gender { get; set; }
+
         public static User CreateTenantAdminUser(int tenantId, string emailAddress)
         {
             var user = new User

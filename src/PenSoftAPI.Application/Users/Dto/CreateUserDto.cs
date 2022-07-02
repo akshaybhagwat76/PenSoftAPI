@@ -1,4 +1,3 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 using Abp.Auditing;
 using Abp.Authorization.Users;
@@ -36,8 +35,7 @@ namespace PenSoftAPI.Users.Dto
         [StringLength(AbpUserBase.MaxPlainPasswordLength)]
         [DisableAuditing]
         public string Password { get; set; }
-        public DateTime? JoiningDate { get; set; }
-        public string Gender { get; set; }
+
         public void Normalize()
         {
             if (RoleNames == null)

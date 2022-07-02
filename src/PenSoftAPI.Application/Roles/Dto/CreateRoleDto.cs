@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Abp.Authorization.Roles;
 using PenSoftAPI.Authorization.Roles;
-using PenSoftAPI.Menus;
 
 namespace PenSoftAPI.Roles.Dto
 {
@@ -27,6 +26,5 @@ namespace PenSoftAPI.Roles.Dto
         {
             GrantedPermissions = new List<string>();
         }
-        public List<Menu> menupermission { get; set; }
     }
 }

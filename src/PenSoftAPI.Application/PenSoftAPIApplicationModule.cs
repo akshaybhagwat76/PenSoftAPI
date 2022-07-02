@@ -2,10 +2,6 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using PenSoftAPI.Authorization;
-using PenSoftAPI.MenuPermission.Dtos;
-using PenSoftAPI.Menus;
-using PenSoftAPI.Menus.Dtos;
-using PenSoftAPI.MenusPermission;
 
 namespace PenSoftAPI
 {
@@ -17,12 +13,6 @@ namespace PenSoftAPI
         public override void PreInitialize()
         {
             Configuration.Authorization.Providers.Add<PenSoftAPIAuthorizationProvider>();
-            Configuration.Modules.AbpAutoMapper().Configurators.Add(config =>
-            {
-                config.CreateMap<CreateOrEditMenuDto, Menu>().ReverseMap();
-                config.CreateMap<CreateOrEditMenuPermissionDto, Menu_permission>().ReverseMap();
-
-            });
         }
 
         public override void Initialize()

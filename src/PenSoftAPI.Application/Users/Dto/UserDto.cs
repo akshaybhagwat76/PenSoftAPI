@@ -36,7 +36,5 @@ namespace PenSoftAPI.Users.Dto
         public DateTime CreationTime { get; set; }
 
         public string[] RoleNames { get; set; }
-        public DateTime? JoiningDate { get; set; }
-        public string Gender { get; set; }
     }
 }
